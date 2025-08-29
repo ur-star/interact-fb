@@ -41,17 +41,17 @@
   ],
   "author": {
     "name": "Utkarsh Roy",
-    "email": "your-email@example.com"
+    "email": "uroyofficial@gmail.com"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/interact-fb.git"
+    "url": "https://github.com/ur-star/interact-fb.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/interact-fb/issues"
+    "url": "https://github.com/ur-star/interact-fb/issues"
   },
-  "homepage": "https://github.com/yourusername/interact-fb#readme",
+  "homepage": "https://github.com/ur-star/interact-fb#readme",
   "engines": {
     "node": ">=14.0.0"
   },
