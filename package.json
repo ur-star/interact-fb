@@ -1,6 +1,6 @@
 {
   "name": "interact-fb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive NPM package for interacting with Facebook Graph API across frontend frameworks (React, Vue, Angular, Svelte, Vanilla JS)",
   "main": "index.js",
   "type": "module",
@@ -20,24 +20,24 @@
   },
   "keywords": [
     "facebook",
+    "client-side",
     "graph-api",
     "fb",
+    "Meta",
     "social-media",
     "frontend",
-    "react",
-    "vue",
+    "react-spa",
+    "vue-spa",
     "angular",
     "svelte",
     "vanilla-js",
-    "lead-generation",
     "marketing",
+    "user",
     "social",
     "npm",
     "javascript",
     "es6",
-    "api-client",
-    "posts",
-    "pages"
+    "api-client"
   ],
   "author": {
     "name": "Utkarsh Roy",
