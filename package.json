@@ -1,6 +1,6 @@
 {
   "name": "interact-fb",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A comprehensive NPM package for interacting with Facebook Graph API across frontend frameworks (React, Vue, Angular, Svelte, Vanilla JS)",
   "main": "index.js",
   "type": "module",
