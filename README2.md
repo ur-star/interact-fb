@@ -78,6 +78,10 @@ console.log(pages);
 ### Pages 🏢
 
 *   `getPages(accessToken?, options?)`: List pages the user manages.
+*   `fetchOwnedPages(accessToken?, options?)`: Fetch pages owned by the user (pages where user has MANAGE task).
+*   `fetchClientPages(accessToken?, options?)`: Fetch client pages (pages where user has ADVERTISE task but not MANAGE).
+*   `fetchManagedPages(accessToken?, options?)`: Fetch all pages managed by the user (all pages with any management task).
+*   `fetchAllPages(accessToken?, options?)`: Fetch all pages (owned, client, managed) with deduplication and type indicators.
 *   `getManagedPage(pageId, accessToken?, options?)`: Get a specific managed page.
 *   `managesPage(pageId, accessToken?)`: Check if the user manages a specific page.
 *   `getPageInfo(pageId, accessToken?, options?)`: Get public information about any page.

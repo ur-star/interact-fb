@@ -42,6 +42,10 @@ const pages = await getPages('USER_ACCESS_TOKEN');
   - Profile picture: `getProfilePicture`
 - You need the pages a user manages or info about a page:
   - List managed pages: `getPages`
+  - Pages owned by user: `fetchOwnedPages`
+  - Client pages (advertiser access): `fetchClientPages`
+  - All managed pages: `fetchManagedPages`
+  - All pages (owned, client, managed): `fetchAllPages`
   - Get one page by id from managed list: `getManagedPage`
   - Check whether a user manages a page: `managesPage`
   - Fetch public page info: `getPageInfo`
@@ -155,6 +159,27 @@ Fetches `me/picture`.
 Fetches pages the user manages.
 - Options: { fields=DEFAULT.pages, limit?, apiOptions }
 - Returns: Promise<{ data: Array<{ id, name, access_token, ... }>, paging? }>
+
+### fetchOwnedPages(accessToken?, options?)
+Fetches pages owned by the user (pages where user has MANAGE task).
+- Options: { fields=DEFAULT.pages, limit?, apiOptions }
+- Returns: Promise<{ data: Array<{ id, name, access_token, tasks, ... }>, paging? }>
+
+### fetchClientPages(accessToken?, options?)
+Fetches client pages (pages where user has ADVERTISE task but not MANAGE).
+- Options: { fields=DEFAULT.pages, limit?, apiOptions }
+- Returns: Promise<{ data: Array<{ id, name, access_token, tasks, ... }>, paging? }>
+
+### fetchManagedPages(accessToken?, options?)
+Fetches all pages managed by the user (all pages with any management task).
+- Options: { fields=DEFAULT.pages, limit?, apiOptions }
+- Returns: Promise<{ data: Array<{ id, name, access_token, ... }>, paging? }>
+
+### fetchAllPages(accessToken?, options?)
+Fetches all pages (owned, managed, or task-based) associated with the user. Combines owned, client, and managed pages with deduplication.
+- Options: { fields=DEFAULT.pages, limit?, deduplicate=true, apiOptions }
+- Returns: Promise<{ data: Array<{ id, name, access_token, pageType, ... }>, summary: { total, owned, client, managed }, paging? }>
+- Note: Each page in the response includes a `pageType` array indicating which types it belongs to (e.g., ['owned', 'managed'])
 
 ### getPageInfo(pageId, accessToken, options?)
 - Options: { fields, apiOptions }

@@ -53,7 +53,11 @@ export {
   getPages,
   getPageInfo,
   getManagedPage,
-  managesPage
+  managesPage,
+  fetchOwnedPages,
+  fetchClientPages,
+  fetchManagedPages,
+  fetchAllPages
 } from './src/pages.js';
 
 // Posts Management
